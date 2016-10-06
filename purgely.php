@@ -238,7 +238,6 @@ class Purgely {
 		$surrogate_control = $this::$surrogate_control_header;
 		$seconds = apply_filters( 'purgely_surrogate_control', $surrogate_control->get_seconds() );
 		$surrogate_control->set_seconds( $seconds );
-		$surrogate_control->set_value( $surrogate_control->prepare_value( $seconds ) );
 
 		do_action( 'purgely_pre_send_surrogate_control', $seconds );
 		$surrogate_control->send_header();

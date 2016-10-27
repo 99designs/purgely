@@ -61,5 +61,6 @@ class Purgely_Surrogate_Control_Header extends Purgely_Header {
 	 */
 	public function set_seconds( $seconds ) {
 		$this->_seconds = $seconds;
+		$this->set_value( $this->prepare_value( $seconds ) );
 	}
 }
